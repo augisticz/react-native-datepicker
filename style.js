@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 let style = StyleSheet.create({
   dateTouch: {
@@ -18,14 +18,16 @@ let style = StyleSheet.create({
   },
   dateInput: {
     flex: 1,
-    height: 40,
-    borderWidth: 1,
-    borderColor: '#aaa',
-    alignItems: 'center',
-    justifyContent: 'center'
+    padding: 5
   },
   dateText: {
-    color: '#333'
+    backgroundColor: '#bd9b6e',
+    textAlign: 'center',
+    color: '#6b4309',
+    borderWidth: Platform.OS === 'ios' ? 0 : 1,
+    borderColor: '#6b4309',
+    borderRadius: 4,
+    fontSize: Platform.OS === 'ios' ? 13 : 15
   },
   placeholderText: {
     color: '#c9c9c9'
